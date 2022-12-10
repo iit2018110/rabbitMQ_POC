@@ -12,7 +12,6 @@ public class Producer {
     @Autowired
     private Queue queue;
 
-    @Scheduled(fixedDelay = 1000, initialDelay = 500)
     public void send(Integer msg) {
         this.rabbitTemplate.convertAndSend(queue.getName(), String.valueOf(msg));
         System.out.println("[x] sent " + String.valueOf(msg));

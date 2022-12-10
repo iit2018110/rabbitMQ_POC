@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class tut1Config {
+public class TaskQueueConfig {
     @Bean
     public Queue queue() {
         return new Queue("hello");
